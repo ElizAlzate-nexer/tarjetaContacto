@@ -1,0 +1,24 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Card>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="../wwwroot/">
+</head>
+
+<div id="container">
+    <div class="card">
+        <div id="image">
+            <img src="@Model.ContactImage.Content.Url()" alt="">
+        </div>
+        <div id="content">
+            <h3> @Model.ContactName</h3>
+            @Model.ContactBadge
+                <p>@Model.ContactDescription</p>
+                <p>@Model.ContactEmail</p>
+                <p>@Model.ContactPhone</p>
+        </div>
+    </div>
+</div>
